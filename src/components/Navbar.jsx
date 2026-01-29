@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="p-2 bg-gradient-to-br from-primary-600 to-purple-600 rounded-xl">
+            <div className="p-2 bg-gradient-to-br from-gray-600 to-gray-800 rounded-xl">
               <Wrench className="h-7 w-7 text-white" />
             </div>
             <div>

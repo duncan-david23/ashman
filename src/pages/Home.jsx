@@ -1,77 +1,46 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { 
-  Smartphone, 
-  Laptop, 
-  Shield, 
-  Clock, 
-  CheckCircle, 
-  MessageCircle,
-  ArrowRight,
-  Award,
-  Users,
-  Sparkles
-} from 'lucide-react'
-import ServiceCard from '../components/ServiceCard'
+import { MessageCircle, ArrowRight, Sparkles } from 'lucide-react'
 
 const Home = () => {
   const services = [
     {
-      icon: Smartphone,
+      id: 1,
       title: 'Phone Repairs',
-      description: 'Expert screen replacements, battery fixes, and water damage recovery',
-      price: 'GHC 150',
-      duration: '1-2 hours',
-      features: ['Premium parts', '6-month warranty', 'Same-day service'],
+      image: 'https://www.diyfixtool.com/cdn/shop/articles/05qOG26wzVLHG2nlWpelvCF-1..v1683302270_jpg_JPEG_1600x900_71.png?v=1701080915',
+      price: 'GHC 150'
     },
     {
-      icon: Laptop,
+      id: 2,
       title: 'Laptop Repairs',
-      description: 'Complete laptop diagnostics and hardware solutions',
-      price: 'GHC 300',
-      duration: '2-4 hours',
-      features: ['Free diagnostics', 'Data backup', 'All brands'],
+      image: 'https://primetechsupport.com/cdn/shop/products/laptop-diagnostic-repairs-product-image-3-b2c.webp?v=1713420208&width=720',
+      price: 'GHC 300'
     },
     {
-      icon: Shield,
+      id: 3,
       title: 'iCloud Removal',
-      description: 'Professional iCloud unlock with guaranteed success',
-      price: 'GHC 250',
-      duration: '24 hours',
-      features: ['100% success', 'No data loss', 'Permanent solution'],
+      image: 'https://certo-software.imgix.net/app/uploads/2023/03/How-To-Fix-A-Hacked-iCloud-Account.jpg?w=2000&h=&auto=format',
+      price: 'GHC 250'
     }
   ]
 
-  const stats = [
-    { icon: Users, value: '500+', label: 'Happy Clients', color: 'from-blue-500/20 to-cyan-500/20' },
-    { icon: Award, value: '98%', label: 'Success Rate', color: 'from-purple-500/20 to-pink-500/20' },
-    { icon: Clock, value: '15 Min', label: 'Avg. Response', color: 'from-orange-500/20 to-red-500/20' },
-    { icon: CheckCircle, value: '2 Years', label: 'Experience', color: 'from-emerald-500/20 to-teal-500/20' }
-  ]
-
   return (
-    <div style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
+    <div>
       {/* Hero Section - FIXED */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <div 
-            className="absolute inset-0 z-10"
-            style={{
-              background: 'linear-gradient(to right, rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.9))'
-            }}
-          />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/90 z-10" />
           <img 
             src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
             alt="Tech Repair Background"
-            className="w-full h-full object-cover"
-            style={{ objectPosition: 'center' }}
+            className="w-full h-full object-cover object-center"
           />
         </div>
 
-        {/* Hero Content - FIXED PADDING */}
-        <div className="relative z-20 w-full px-4 sm:px-6 lg:px-8 pt-20 pb-32 text-center">
+        {/* Hero Content */}
+        <div className="relative z-20 w-full px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-12 text-center">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -83,95 +52,69 @@ const Home = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6"
-                style={{ backdropFilter: 'blur(8px)' }}
+                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-4 sm:mb-6"
               >
-                <Sparkles className="w-4 h-4" style={{ color: '#f59e0b' }} />
+                <Sparkles className="w-4 h-4 text-yellow-400" />
                 <span className="text-sm font-medium text-white">Professional Device Repair Service</span>
               </motion.span>
               
-              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
                 <span className="text-white">Expert </span>
-                <span 
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text"
-                  style={{ WebkitBackgroundClip: 'text', color: 'transparent' }}
-                >
+                <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                   Device Repairs
                 </span>
                 <br />
                 <span className="text-white">You Can Trust</span>
               </h1>
               
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 sm:mb-10 max-w-3xl mx-auto px-4">
-                Professional phone & laptop repairs with warranty. Fast, reliable, and premium service in Ghana.
+              <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
+                Professional phone & laptop repairs with warranty. Fast, reliable service in Ghana.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2">
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="https://wa.me/233539913517?text=Hi%20Ashman!%20I%27m%20interested%20in%20your%20repair%20services."
+                  href="https://wa.me/233539913517?text=Hi%20Ashman!%20I'm%20interested%20in%20your%20repair%20services."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative overflow-hidden px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 active:scale-95 w-full sm:w-auto"
-                  style={{
-                    background: 'linear-gradient(to right, #2563eb, #1d4ed8)',
-                    color: 'white'
-                  }}
+                  className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-5 sm:px-6 py-3 sm:py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 active:scale-95 w-full sm:w-auto flex items-center justify-center gap-2"
                 >
-                  <span className="relative flex items-center justify-center gap-2 sm:gap-3">
-                    <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
-                    <span className="text-base sm:text-lg">Book on WhatsApp</span>
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-2 transition-transform" />
-                  </span>
+                  <MessageCircle className="w-5 h-5" />
+                  <span className="text-sm sm:text-base">Book on WhatsApp</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </motion.a>
                 
                 <Link
                   to="/services"
-                  className="relative overflow-hidden border-2 border-blue-600 text-blue-600 px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 hover:-translate-y-1 active:scale-95 w-full sm:w-auto"
+                  className="border-2 border-white text-white px-5 sm:px-6 py-3 sm:py-4 rounded-xl font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 hover:-translate-y-1 active:scale-95 w-full sm:w-auto flex items-center justify-center gap-2"
                 >
-                  <span className="relative flex items-center justify-center gap-2 sm:gap-3">
-                    <span className="text-base sm:text-lg">Explore Services</span>
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-2 transition-transform" />
-                  </span>
+                  <span className="text-sm sm:text-base">Explore Services</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </motion.div>
           </div>
         </div>
 
-        {/* Stats Section - MOVED BELOW CONTENT ON MOBILE */}
-        <div className="absolute bottom-0 left-0 right-0 z-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 sm:pb-12">
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-              {stats.map((stat, index) => (
+        {/* Stats Section - MOVED COMPLETELY BELOW */}
+        <div className="absolute bottom-4 sm:bottom-8 left-0 right-0 z-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+              {[
+                { value: '500+', label: 'Happy Clients' },
+                { value: '98%', label: 'Success Rate' },
+                { value: '15 Min', label: 'Response Time' },
+                { value: '2 Years', label: 'Experience' }
+              ].map((stat, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 + 0.5 }}
-                  className="rounded-2xl p-3 sm:p-4 md:p-6 text-center backdrop-blur-lg"
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
-                    backdropFilter: 'blur(12px)'
-                  }}
+                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-3 sm:p-4 text-center"
                 >
-                  <div 
-                    className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl mb-2 sm:mb-3 md:mb-4"
-                    style={{
-                      background: stat.color.includes('blue') 
-                        ? 'linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(6, 182, 212, 0.2))'
-                        : stat.color.includes('purple')
-                        ? 'linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2))'
-                        : stat.color.includes('orange')
-                        ? 'linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(239, 68, 68, 0.2))'
-                        : 'linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(20, 184, 166, 0.2))'
-                    }}
-                  >
-                    <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
-                  </div>
-                  <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-1">{stat.value}</div>
+                  <div className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-xs sm:text-sm text-gray-300">{stat.label}</div>
                 </motion.div>
               ))}
@@ -180,32 +123,49 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Preview - FIXED SPACING */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+      {/* Services Preview - IMAGE BACKGROUNDS */}
+      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-8 sm:mb-12 md:mb-16"
+            className="text-center mb-8 sm:mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
               <span className="text-gray-900">Premium </span>
-              <span 
-                className="bg-gradient-to-r from-gray-600 to-gray-800 bg-clip-text"
-                style={{ WebkitBackgroundClip: 'text', color: 'transparent' }}
-              >
+              <span className="bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
                 Repair Services
               </span>
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
-              We provide comprehensive repair solutions using genuine parts and certified technicians.
+            <p className="text-gray-600 max-w-xl mx-auto text-sm sm:text-base">
+              Quality repairs with warranty. Contact us for details.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
-            {services.map((service, index) => (
-              <ServiceCard key={index} service={service} index={index} />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            {services.map((service) => (
+              <Link
+                key={service.id}
+                to="/services"
+                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              >
+                <div className="aspect-[4/3] relative">
+                  <img 
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
+                    <h3 className="text-lg sm:text-xl font-bold mb-1">{service.title}</h3>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm sm:text-base font-semibold">{service.price}</span>
+                      <span className="text-xs sm:text-sm bg-white/20 px-2 py-1 rounded">View Details</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
 
@@ -213,49 +173,41 @@ const Home = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="text-center mt-8 sm:mt-12"
           >
             <Link
               to="/services"
-              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-base sm:text-lg group"
+              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-sm sm:text-base group"
             >
               View All Services
-              <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* CTA Section - FIXED SPACING */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-24"
-        style={{
-          background: 'linear-gradient(to right, #111827, #1f2937)'
-        }}
-      >
-        <div className="max-w-5xl mx-auto text-center">
+      {/* CTA Section */}
+      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 bg-gradient-to-r from-gray-900 to-gray-800">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6">
               Ready to Fix Your Device?
             </h2>
-            <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8 md:mb-10 max-w-3xl mx-auto px-4">
-              Contact us now for a free diagnostic and quote. We're here to help 24/7.
+            <p className="text-gray-300 mb-6 sm:mb-8 max-w-xl mx-auto text-sm sm:text-base">
+              Contact us now for a free diagnostic and quote.
             </p>
             <a
               href="https://wa.me/233539913517"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto"
-              style={{
-                background: 'linear-gradient(to right, #f59e0b, #d97706)',
-                color: 'white'
-              }}
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-5 sm:px-6 py-3 sm:py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto"
             >
-              <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
-              <span className="text-base sm:text-lg">Get Instant Help on WhatsApp</span>
+              <MessageCircle className="w-5 h-5" />
+              <span className="text-sm sm:text-base">Get Instant Help</span>
             </a>
           </motion.div>
         </div>

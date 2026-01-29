@@ -11,7 +11,8 @@ import {
   Mail,
   CheckCircle,
   Heart,
-  Target
+  Target,
+  Wrench
 } from 'lucide-react'
 
 const About = () => {
@@ -20,25 +21,29 @@ const About = () => {
       icon: Shield,
       title: 'Quality First',
       description: 'We use only genuine parts and follow industry best practices for all repairs.',
-      color: 'from-blue-500 to-cyan-500'
+      bgColor: 'bg-blue-100',
+      iconColor: 'text-blue-600'
     },
     {
       icon: Heart,
       title: 'Customer Care',
       description: 'Every customer is treated with respect and receives personalized service.',
-      color: 'from-rose-500 to-pink-500'
+      bgColor: 'bg-red-100',
+      iconColor: 'text-red-600'
     },
     {
       icon: Target,
       title: 'Precision',
       description: 'Attention to detail in every repair ensures long-lasting results.',
-      color: 'from-emerald-500 to-teal-500'
+      bgColor: 'bg-green-100',
+      iconColor: 'text-green-600'
     },
     {
       icon: Clock,
       title: 'Fast Service',
       description: 'Most repairs completed within hours, not days.',
-      color: 'from-amber-500 to-orange-500'
+      bgColor: 'bg-yellow-100',
+      iconColor: 'text-yellow-600'
     }
   ]
 
@@ -46,81 +51,92 @@ const About = () => {
     {
       number: '01',
       title: 'Diagnosis',
-      description: 'Free device inspection and problem identification'
+      description: 'Free device inspection and problem identification',
+      color: 'text-blue-600 border-blue-200',
+      image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
     {
       number: '02',
       title: 'Quote',
-      description: 'Transparent pricing with no hidden charges'
+      description: 'Transparent pricing with no hidden charges',
+      color: 'text-purple-600 border-purple-200',
+      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
     {
       number: '03',
       title: 'Repair',
-      description: 'Expert repair using genuine parts'
+      description: 'Expert repair using genuine parts',
+      color: 'text-green-600 border-green-200',
+      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
     {
       number: '04',
       title: 'Testing',
-      description: 'Comprehensive testing and quality check'
+      description: 'Comprehensive testing and quality check',
+      color: 'text-yellow-600 border-yellow-200',
+      image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
     {
       number: '05',
       title: 'Warranty',
-      description: '6-month warranty on all repairs'
+      description: '6-month warranty on all repairs',
+      color: 'text-indigo-600 border-indigo-200',
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     }
   ]
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-16 sm:pt-20 pb-12 mt-[20px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-neutral-900">About </span>
-            <span className="gradient-text">Ashman Repairs</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+            <span className="text-gray-900">About </span>
+            <span className="text-blue-600">Ashman Repairs</span>
           </h1>
-          <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
             Your trusted partner for premium device repairs in Ghana. Combining technical expertise with exceptional customer service.
           </p>
         </motion.div>
 
-        {/* Founder Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+        {/* Founder Section with Image */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-16 sm:mb-20">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="relative"
+          
           >
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary-500 to-purple-500 rounded-3xl opacity-20 blur-xl" />
-              <div className="relative bg-white rounded-2xl p-10 shadow-2xl">
-                <div className="flex items-center space-x-6 mb-8">
-                  <div className="w-28 h-28 rounded-2xl bg-gradient-to-br from-primary-600 to-purple-600 flex items-center justify-center">
-                    <User className="w-14 h-14 text-white" />
-                  </div>
-                  <div>
-                    <h2 className="text-3xl font-bold text-neutral-900">Ashman</h2>
-                    <p className="text-primary-600 font-semibold text-lg">Founder & Lead Technician</p>
-                    <p className="text-neutral-600 mt-2">Certified Repair Specialist</p>
+            <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-200">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mb-6">
+                <div className="relative">
+                  <img 
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                    alt="Ashman - Founder"
+                    className="w-24 h-24 sm:w-28 sm:h-28 rounded-xl object-cover"
+                  />
+                  <div className="absolute -bottom-2 -right-2 bg-blue-600 p-2 rounded-lg">
+                    <Wrench className="w-5 h-5 text-white" />
                   </div>
                 </div>
-                <p className="text-neutral-700 text-lg leading-relaxed mb-6">
-                  With over 2 years of experience in device repairs across Ghana, I've dedicated my career to helping people get their essential devices back in perfect condition. My passion for technology and commitment to quality service drives everything we do.
-                </p>
-                <div className="flex items-center space-x-4">
-                  <div className="flex items-center space-x-2">
-                    <Award className="w-5 h-5 text-accent-500" />
-                    <span className="text-neutral-700">Certified Technician</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-5 h-5 text-emerald-500" />
-                    <span className="text-neutral-700">500+ Repairs</span>
-                  </div>
+                <div className="text-center sm:text-left">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Ashman</h2>
+                  <p className="text-blue-600 font-semibold text-sm sm:text-base">Founder & Lead Technician</p>
+                  <p className="text-gray-600 text-sm sm:text-base">Certified Repair Specialist</p>
+                </div>
+              </div>
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-6">
+                With over 2 years of experience in device repairs across Ghana, I've dedicated my career to helping people get their essential devices back in perfect condition. My passion for technology and commitment to quality service drives everything we do.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center gap-2">
+                  <Award className="w-5 h-5 text-yellow-500" />
+                  <span className="text-gray-700 text-sm sm:text-base">Certified Technician</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-gray-700 text-sm sm:text-base">500+ Repairs</span>
                 </div>
               </div>
             </div>
@@ -131,21 +147,26 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-3xl font-bold text-neutral-900 mb-8">
-              Our <span className="gradient-text">Mission</span>
+            <img 
+              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Repair Workshop"
+              className="w-full h-48 sm:h-64 rounded-xl sm:rounded-2xl object-cover mb-6 sm:mb-8"
+            />
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
+              Our <span className="text-blue-600">Mission</span>
             </h3>
-            <p className="text-neutral-600 text-lg mb-8 leading-relaxed">
+            <p className="text-gray-600 text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed">
               To provide reliable, affordable, and high-quality device repair services to the people of Ghana, ensuring everyone has access to professional technical support for their essential devices.
             </p>
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {values.map((value, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${value.color} flex items-center justify-center flex-shrink-0`}>
-                    <value.icon className="w-6 h-6 text-white" />
+                <div key={index} className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
+                  <div className={`p-2 ${value.bgColor} rounded-lg flex-shrink-0`}>
+                    <value.icon className={`w-5 h-5 ${value.iconColor}`} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-neutral-900 mb-1">{value.title}</h4>
-                    <p className="text-neutral-600">{value.description}</p>
+                    <h4 className="font-bold text-gray-900 text-sm sm:text-base mb-1">{value.title}</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm">{value.description}</p>
                   </div>
                 </div>
               ))}
@@ -153,47 +174,47 @@ const About = () => {
           </motion.div>
         </div>
 
-        {/* Process Section */}
-        <div className="mb-24">
-          <h3 className="text-3xl font-bold text-center text-neutral-900 mb-12">
-            Our <span className="gradient-text">Repair Process</span>
+        {/* Process Section with Images */}
+        <div className="mb-16 sm:mb-20">
+          <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
+            Our <span className="text-blue-600">Repair Process</span>
           </h3>
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary-500 to-purple-500 hidden md:block" />
-            
-            <div className="space-y-8">
-              {processSteps.map((step, index) => (
-                <motion.div
-                  key={step.number}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className={`flex flex-col md:flex-row items-center ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
-                >
-                  <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-                    <div className="bg-white p-8 rounded-2xl shadow-lg border border-neutral-200">
-                      <div className="text-4xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent mb-4">
-                        {step.number}
-                      </div>
-                      <h4 className="text-xl font-bold text-neutral-900 mb-3">
-                        {step.title}
-                      </h4>
-                      <p className="text-neutral-600">
-                        {step.description}
-                      </p>
+          
+          <div className="space-y-8 sm:space-y-12">
+            {processSteps.map((step, index) => (
+              <motion.div
+                key={step.number}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8"
+              >
+                {/* Image */}
+                <div className="w-full lg:w-1/2">
+                  <img 
+                    src={step.image}
+                    alt={step.title}
+                    className="w-full h-48 sm:h-56 rounded-xl sm:rounded-2xl object-cover"
+                  />
+                </div>
+                
+                {/* Content */}
+                <div className="w-full lg:w-1/2">
+                  <div className={`bg-white p-6 rounded-xl sm:rounded-2xl shadow-lg border ${step.color}`}>
+                    <div className={`text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 ${step.color.split(' ')[0]}`}>
+                      {step.number}
                     </div>
+                    <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
+                      {step.title}
+                    </h4>
+                    <p className="text-gray-600 text-sm sm:text-base">
+                      {step.description}
+                    </p>
                   </div>
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary-600 to-purple-600 flex items-center justify-center text-white font-bold my-4 md:my-0 relative z-10">
-                    {index + 1}
-                  </div>
-                  <div className="w-full md:w-1/2" />
-                </motion.div>
-              ))}
-            </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
 
@@ -202,49 +223,53 @@ const About = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-neutral-900 to-neutral-800 rounded-3xl p-12 text-white"
+          className="bg-gray-900 rounded-xl sm:rounded-2xl p-6 sm:p-8 text-white"
         >
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">
-              Get Your Device Fixed Today
-            </h2>
-            <p className="text-xl text-neutral-300 mb-10 max-w-2xl mx-auto">
-              Contact us for a free diagnostic and quote. We're committed to providing the best repair experience.
-            </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-6 sm:mb-8">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">
+                Get Your Device Fixed Today
+              </h2>
+              <p className="text-gray-300 text-sm sm:text-base max-w-xl mx-auto">
+                Contact us for a free diagnostic and quote. We're committed to providing the best repair experience.
+              </p>
+            </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-white/10 rounded-full mb-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-3">
                   <Phone className="w-6 h-6" />
                 </div>
-                <h3 className="font-semibold mb-2">Call Us</h3>
-                <p className="text-neutral-300">+233539913517</p>
+                <h3 className="font-semibold mb-1 text-sm sm:text-base">Call Us</h3>
+                <p className="text-gray-300 text-sm">+233 53 991 3517</p>
               </div>
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-white/10 rounded-full mb-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-3">
                   <Mail className="w-6 h-6" />
                 </div>
-                <h3 className="font-semibold mb-2">Email</h3>
-                <p className="text-neutral-300">contact@ashmanrepairs.com</p>
+                <h3 className="font-semibold mb-1 text-sm sm:text-base">Email</h3>
+                <p className="text-gray-300 text-sm">contact@ashmanrepairs.com</p>
               </div>
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-white/10 rounded-full mb-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-3">
                   <MapPin className="w-6 h-6" />
                 </div>
-                <h3 className="font-semibold mb-2">Service Area</h3>
-                <p className="text-neutral-300">Accra & Nationwide</p>
+                <h3 className="font-semibold mb-1 text-sm sm:text-base">Service Area</h3>
+                <p className="text-gray-300 text-sm">Accra & Nationwide</p>
               </div>
             </div>
             
-            <a
-              href="https://wa.me/233539913517"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary inline-flex items-center space-x-3 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700"
-            >
-              <MessageCircle className="w-6 h-6" />
-              <span className="text-lg">Chat on WhatsApp</span>
-            </a>
+            <div className="text-center">
+              <a
+                href="https://wa.me/233539913517"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto"
+              >
+                <MessageCircle className="w-5 h-5" />
+                <span className="text-sm sm:text-base">Chat on WhatsApp</span>
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>
