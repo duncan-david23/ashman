@@ -17,7 +17,7 @@ const Footer = () => {
               </div>
               <div>
                 <h2 className="text-2xl font-bold">
-                  Ashman<span className="text-primary-400"> R & S</span>
+                  Ashman<span className="text-primary-400"> Tech</span>
                 </h2>
                 <p className="text-sm text-neutral-400">Professional Device Care</p>
               </div>
@@ -85,7 +85,7 @@ const Footer = () => {
               </li>
               <li className="text-neutral-400">
                 <span className="block text-sm text-neutral-500">Email</span>
-                contact@ashmanrepairs.com
+                ashmantechnology5@gmail.com
               </li>
               <li className="text-neutral-400">
                 <span className="block text-sm text-neutral-500">Hours</span>
@@ -99,7 +99,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-neutral-800 mt-12 pt-8 text-center text-neutral-500 text-sm">
-          <p>&copy; {currentYear} Ashman Repairs And Services. All rights reserved.</p>
+          <p>&copy; {currentYear} Ashman Technology. All rights reserved.</p>
           <p className="mt-2">Serving Ghana with professional device repair services</p>
         </div>
       </div>

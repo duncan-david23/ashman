@@ -67,7 +67,7 @@ const About = () => {
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             <span className="text-gray-900">About </span>
-            <span className="text-blue-600">Ashman Repairs</span>
+            <span className="text-blue-600">Ashman Technology</span>
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
             Your trusted partner for premium device repairs in Ghana. Combining technical expertise with exceptional customer service.
