@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MessageCircle } from 'lucide-react'
+import macbookIcloudImg from '../assets/macbook_icloud.webp'
+import macbookRemoteManagementImg from '../assets/mdm-screen.png'
+import androidImg from '../assets/android_img.webp'
+import iphoneSimUnlockImg from '../assets/unlock-sim-iphone.jpg'
+import windowsActivation from '../assets/windows_activation.webp'
+import antivirusImg from '../assets/antivirus_key.png'
+
 
 const Services = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -15,52 +22,64 @@ const Services = () => {
 
   const services = [
     {
-      id: 'phone-repair',
-      title: 'Phone Screen Replacement',
-      image: 'https://www.diyfixtool.com/cdn/shop/articles/05qOG26wzVLHG2nlWpelvCF-1..v1683302270_jpg_JPEG_1600x900_71.png?v=1701080915',
-      price: 'GHC 120 ',
-      duration: '1-2 hours',
-      category: 'phone'
-    },
-    {
-      id: 'battery-replacement',
-      title: 'Battery Replacement',
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      price: 'GHC 80',
-      duration: '45 mins',
-      category: 'phone'
-    },
-    {
-      id: 'laptop-repair',
-      title: 'Laptop Hardware Repair',
-      image: 'https://primetechsupport.com/cdn/shop/products/laptop-diagnostic-repairs-product-image-3-b2c.webp?v=1713420208&width=720',
-      price: 'GHC 200',
-      duration: '2-6 hours',
-      category: 'laptop'
-    },
-    {
-      id: 'icloud-removal',
-      title: 'iCloud Activation Lock',
+      id: 'iphone-icloud-remove',
+      title: 'iPhones iCloud Permanent Remove',
       image: 'https://certo-software.imgix.net/app/uploads/2023/03/How-To-Fix-A-Hacked-iCloud-Account.jpg?w=2000&h=&auto=format',
-      price: 'GHC 200 - GHC 350',
-      duration: '24-48 hours',
       category: 'apple'
     },
     {
-      id: 'data-recovery',
-      title: 'Data Recovery Service',
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      price: 'GHC 300 ',
-      duration: '24-72 hours',
-      category: 'other'
+      id: 'iphone-icloud-bypass',
+      title: 'iPhone iCloud Bypass',
+      image: 'https://certo-software.imgix.net/app/uploads/2023/03/How-To-Fix-A-Hacked-iCloud-Account.jpg?w=2000&h=&auto=format',
+      category: 'apple'
     },
     {
-      id: 'motherboard-repair',
-      title: 'Motherboard Repair',
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      price: 'GHC 400',
-      duration: '3-8 hours',
+      id: 'macbook-icloud-removal',
+      title: 'MacBook iCloud Removal',
+      image: macbookIcloudImg,
+      category: 'apple'
+    },
+    {
+      id: 'macbook-mdm-removal',
+      title: 'MacBook Remote Management Control / MDM Removal',
+      image: macbookRemoteManagementImg,
+      category: 'apple'
+    },
+    {
+      id: 'android-google-account-removal',
+      title: 'Android Google Account Removal',
+      image: androidImg,
+      category: 'phone'
+    },
+    {
+      id: 'android-mdm-removal',
+      title: 'Android Remote Management Control / MDM Removal',
+      image: androidImg,
+      category: 'phone'
+    },
+    {
+      id: 'iphone-sim-unlock',
+      title: 'iPhone SIM Unlocking',
+      image: iphoneSimUnlockImg,
+      category: 'phone'
+    },
+    {
+      id: 'android-decoding',
+      title: 'Android Decoding',
+      image: androidImg,
+      category: 'phone'
+    },
+    {
+      id: 'laptop-windows-key',
+      title: 'Laptop Windows Activation Key',
+      image: windowsActivation,
       category: 'laptop'
+    },
+    {
+      id: 'antivirus-key',
+      title: 'Antivirus Products Key',
+      image: antivirusImg,
+      category: 'other'
     }
   ]
 
@@ -69,7 +88,7 @@ const Services = () => {
     : services.filter(service => service.category === selectedCategory)
 
   const handleBookService = (service) => {
-    const message = `Hi Ashman! I need help with: ${service.title}\nPrice: ${service.price}\nPlease contact me.`;
+    const message = `Hi Ashman! I need help with: ${service.title}\nPlease contact me.`;
     const whatsappUrl = `https://wa.me/233539913517?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank')
   }

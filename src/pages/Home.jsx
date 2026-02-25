@@ -2,26 +2,29 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { MessageCircle, ArrowRight, Sparkles } from 'lucide-react'
+import androidImg from '../assets/android_img.webp'
+import macbookIcloudImg from '../assets/macbook_icloud.webp'
+
 
 const Home = () => {
   const services = [
     {
       id: 1,
-      title: 'Phone Repairs',
-      image: 'https://www.diyfixtool.com/cdn/shop/articles/05qOG26wzVLHG2nlWpelvCF-1..v1683302270_jpg_JPEG_1600x900_71.png?v=1701080915',
-      price: 'GHC 150'
+      title: 'Macbook iCloud removal',
+      image: macbookIcloudImg,
+      
     },
     {
       id: 2,
-      title: 'Laptop Repairs',
-      image: 'https://primetechsupport.com/cdn/shop/products/laptop-diagnostic-repairs-product-image-3-b2c.webp?v=1713420208&width=720',
-      price: 'GHC 300'
+      title: 'Android Decoding',
+      image: androidImg,
+      
     },
     {
       id: 3,
-      title: 'iCloud Removal',
+      title: 'iPhone iCloud bypass ',
       image: 'https://certo-software.imgix.net/app/uploads/2023/03/How-To-Fix-A-Hacked-iCloud-Account.jpg?w=2000&h=&auto=format',
-      price: 'GHC 250'
+     
     }
   ]
 
@@ -68,7 +71,7 @@ const Home = () => {
               </h1>
               
               <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
-                Professional phone & laptop repairs with warranty. Fast, reliable service in Ghana.
+                Professional phone & laptop repairs. Fast, reliable service in Ghana.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2">
@@ -102,10 +105,10 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
               {[
-                { value: '500+', label: 'Happy Clients' },
+                { value: '315+', label: 'Happy Clients' },
                 { value: '98%', label: 'Success Rate' },
-                { value: '15 Min', label: 'Response Time' },
-                { value: '2 Years', label: 'Experience' }
+                { value: 'Instant', label: 'Response Time' },
+                { value: '6 Years', label: 'Experience' }
               ].map((stat, index) => (
                 <motion.div
                   key={index}

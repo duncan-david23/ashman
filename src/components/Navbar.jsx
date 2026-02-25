@@ -24,7 +24,7 @@ const Navbar = () => {
             </div>
             <div>
               <h1 className="text-2xl font-bold text-neutral-900">
-                Ashman<span className="gradient-text">Repairs</span>
+                Ashman<span className="gradient-text"> R & S</span>
               </h1>
               <p className="text-xs text-neutral-500">Professional Device Care</p>
             </div>

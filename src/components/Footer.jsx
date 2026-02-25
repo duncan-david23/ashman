@@ -17,13 +17,13 @@ const Footer = () => {
               </div>
               <div>
                 <h2 className="text-2xl font-bold">
-                  Ashman<span className="text-primary-400">Repairs</span>
+                  Ashman<span className="text-primary-400"> R & S</span>
                 </h2>
                 <p className="text-sm text-neutral-400">Professional Device Care</p>
               </div>
             </Link>
             <p className="text-neutral-400 mb-8">
-              Premium device repair services with warranty. Serving Ghana with expertise and care.
+              Premium device repair services. Serving Ghana with expertise and care.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-neutral-700 transition-colors">
@@ -67,11 +67,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Services</h3>
             <ul className="space-y-4">
-              <li className="text-neutral-400">Phone Repairs</li>
-              <li className="text-neutral-400">Laptop Repairs</li>
-              <li className="text-neutral-400">iCloud Removal</li>
-              <li className="text-neutral-400">Data Recovery</li>
-              <li className="text-neutral-400">Tablet Repairs</li>
+              <li className="text-neutral-400">MacBook Remote Management Control / MDM Removal</li>
+              <li className="text-neutral-400">Android Google Account Removal</li>
+              <li className="text-neutral-400">iPhone SIM Unlocking</li>
+              <li className="text-neutral-400">Laptop Windows Activation Key</li>
+              <li className="text-neutral-400">Antivirus Products Key</li>
             </ul>
           </div>
 
@@ -81,7 +81,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="text-neutral-400">
                 <span className="block text-sm text-neutral-500">Phone</span>
-                +233 XX XXX XXXX
+                +233539913517
               </li>
               <li className="text-neutral-400">
                 <span className="block text-sm text-neutral-500">Email</span>
