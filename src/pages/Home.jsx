@@ -3,7 +3,9 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { MessageCircle, ArrowRight, Sparkles } from 'lucide-react'
 import androidImg from '../assets/android_img.webp'
-import macbookIcloudImg from '../assets/macbook_icloud.webp'
+import androidAccountDecoding from '../assets/android_decode.jpeg'
+import macbookIcloudImg from '../assets/macbook_icloud.jpeg'
+import iphone_activation from '../assets/iphone_1.jpeg'
 
 
 const Home = () => {
@@ -17,14 +19,14 @@ const Home = () => {
     {
       id: 2,
       title: 'Android Decoding',
-      image: androidImg,
+      image: androidAccountDecoding,
       
     },
     {
       id: 3,
       title: 'iPhone iCloud bypass ',
-      image: 'https://certo-software.imgix.net/app/uploads/2023/03/How-To-Fix-A-Hacked-iCloud-Account.jpg?w=2000&h=&auto=format',
-     
+      image: iphone_activation,
+
     }
   ]
 

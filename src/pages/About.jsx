@@ -101,7 +101,7 @@ const About = () => {
           >
             <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-200">
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mb-6">
-                <div className="relative">
+                {/* <div className="relative">
                   <img 
                     src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                     alt="Ashman - Founder"
@@ -110,7 +110,7 @@ const About = () => {
                   <div className="absolute -bottom-2 -right-2 bg-blue-600 p-2 rounded-lg">
                     <Wrench className="w-5 h-5 text-white" />
                   </div>
-                </div>
+                </div> */}
                 <div className="text-center sm:text-left">
                   <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Ashman</h2>
                   <p className="text-blue-600 font-semibold text-sm sm:text-base">Founder & Lead Technician</p>
@@ -169,7 +169,7 @@ const About = () => {
         >
           <div className="text-center mb-8 sm:mb-10">
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-              Why Choose <span className="text-blue-600">Ashman Repairs?</span>
+              Why Choose <span className="text-blue-600">Ashman Technology?</span>
             </h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We're not just another repair shop – we're your trusted technology partners
@@ -233,14 +233,14 @@ const About = () => {
                   <Mail className="w-6 h-6" />
                 </div>
                 <h3 className="font-semibold mb-1 text-sm sm:text-base">Email</h3>
-                <p className="text-gray-300 text-sm">contact@ashmanrepairs.com</p>
+                <p className="text-gray-300 text-sm">ashmantechnology5@gmail.com</p>
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-3">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <h3 className="font-semibold mb-1 text-sm sm:text-base">Service Area</h3>
-                <p className="text-gray-300 text-sm">Accra & Nationwide</p>
+                <p className="text-gray-300 text-sm">Accra, Circle Tip Toe Lane</p>
               </div>
             </div>
             

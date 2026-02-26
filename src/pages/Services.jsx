@@ -1,12 +1,20 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MessageCircle } from 'lucide-react'
-import macbookIcloudImg from '../assets/macbook_icloud.webp'
+import macbookIcloudImg from '../assets/macbook_icloud.jpeg'
 import macbookRemoteManagementImg from '../assets/mdm-screen.png'
 import androidImg from '../assets/android_img.webp'
+import androidAccountRemove from '../assets/android_cloud.jpeg'
+import androidAccountDecoding from '../assets/android_decode.jpeg'
 import iphoneSimUnlockImg from '../assets/unlock-sim-iphone.jpg'
 import windowsActivation from '../assets/windows_activation.webp'
 import antivirusImg from '../assets/antivirus_key.png'
+import iphone_activation from '../assets/iphone_1.jpeg'
+import androidMdmRemovalImg from '../assets/android_mdm.jpeg'
+import simUnlockImg from '../assets/sim_unlock.jpeg'
+import deviceReplacement from '../assets/device_replacement.webp'
+import antivirus_img from '../assets/antivirus_img.webp'
+import geveySimImg from '../assets/gevey_img.jpeg'
 
 
 const Services = () => {
@@ -24,13 +32,13 @@ const Services = () => {
     {
       id: 'iphone-icloud-remove',
       title: 'iPhones iCloud Permanent Remove',
-      image: 'https://certo-software.imgix.net/app/uploads/2023/03/How-To-Fix-A-Hacked-iCloud-Account.jpg?w=2000&h=&auto=format',
+      image: iphone_activation,
       category: 'apple'
     },
     {
       id: 'iphone-icloud-bypass',
       title: 'iPhone iCloud Bypass',
-      image: 'https://certo-software.imgix.net/app/uploads/2023/03/How-To-Fix-A-Hacked-iCloud-Account.jpg?w=2000&h=&auto=format',
+      image: iphone_activation,
       category: 'apple'
     },
     {
@@ -48,25 +56,25 @@ const Services = () => {
     {
       id: 'android-google-account-removal',
       title: 'Android Google Account Removal',
-      image: androidImg,
+      image: androidAccountRemove,
       category: 'phone'
     },
     {
       id: 'android-mdm-removal',
       title: 'Android Remote Management Control / MDM Removal',
-      image: androidImg,
+      image: androidMdmRemovalImg,
       category: 'phone'
     },
     {
       id: 'iphone-sim-unlock',
       title: 'iPhone SIM Unlocking',
-      image: iphoneSimUnlockImg,
+      image: simUnlockImg,
       category: 'phone'
     },
     {
       id: 'android-decoding',
       title: 'Android Decoding',
-      image: androidImg,
+      image: androidAccountDecoding,
       category: 'phone'
     },
     {
@@ -78,8 +86,20 @@ const Services = () => {
     {
       id: 'antivirus-key',
       title: 'Antivirus Products Key',
-      image: antivirusImg,
+      image: antivirus_img,
       category: 'other'
+    },
+    {
+      id: 'screen-battery-charging-replacement',
+      title: 'Screen / Battery / Charging system replacement',
+      image: deviceReplacement,
+      category: 'phone' // This service applies to both categories
+    },
+    {
+      id: 'gevey-sim-activation',
+      title: 'GEVEY / JV SIM Activation',
+      image: geveySimImg,
+      category: 'phone' // This service applies to both categories
     }
   ]
 
