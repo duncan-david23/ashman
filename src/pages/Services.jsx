@@ -15,6 +15,7 @@ import simUnlockImg from '../assets/sim_unlock.jpeg'
 import deviceReplacement from '../assets/device_replacement.webp'
 import antivirus_img from '../assets/antivirus_img.webp'
 import geveySimImg from '../assets/gevey_img.jpeg'
+import laptopRepairs from '../assets/laptop_repairs.jpg'
 
 
 const Services = () => {
@@ -100,6 +101,12 @@ const Services = () => {
       title: 'GEVEY / JV SIM Activation',
       image: geveySimImg,
       category: 'phone' // This service applies to both categories
+    },
+    {
+      id: 'laptop-repair',
+      title: 'Laptop Repair',
+      image: laptopRepairs,
+      category: 'laptop' // This service applies to both categories
     }
   ]
 
